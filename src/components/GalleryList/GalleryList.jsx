@@ -1,14 +1,16 @@
 // import galleryItem component
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList({ list }) {
+function GalleryList({ list, updateItem }) {
     
     return (
         <>
             {list.map(item =>
                 (<GalleryItem
                     key={item.id}
-                item = {item} />)
+                item={item}
+                updateItem = {updateItem}
+            />)
             )}
         </>
     )

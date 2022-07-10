@@ -25,6 +25,13 @@ function App() {
         console.log('ERROR ON GET, in APP', error);
       });
   }
+
+  // PUT Request
+  const updateItem = (id) => {
+    axios.put(`gallery/like/${id}`)
+      .then(response => getPhotos())
+      .catch(error => console.log('Error PUTting', error))
+  }
   // on ready function to load gallery when page is loaded. done once
   useEffect( () => {
     getPhotos();
@@ -39,7 +46,9 @@ function App() {
         {/* <img src="images/goat_small.jpg" /> */}
         <div className='gallery-container'>
         <GalleryList list={photoList}
-            photo={getPhotos} />
+            photo={getPhotos}
+            updateItem= {updateItem}  
+          />
         </div>
         
       </div>
