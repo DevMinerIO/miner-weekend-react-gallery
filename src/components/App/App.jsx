@@ -37,8 +37,10 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         {/* <img src="images/goat_small.jpg" /> */}
+        <div className='gallery-container'>
         <GalleryList list={photoList}
-          photo={getPhotos} />
+            photo={getPhotos} />
+        </div>
         
       </div>
     );

@@ -14,12 +14,18 @@
 }
 
 img {
-  height: 100px;
+  height: 120px;
+  width: 120px;
   width: auto;
 }
 
-.single-photo {
-  display: inline-flexbox;
-  padding: 100px;
-}
 
+.single-photo, .item-description {
+  margin:auto;
+  height: 120px;
+  height: 120px;
+  text-align: center;
+  border: 1px solid;
+  display: inline-block;
+  box-sizing: border-box;
+}
