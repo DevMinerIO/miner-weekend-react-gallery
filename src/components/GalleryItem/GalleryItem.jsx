@@ -1,14 +1,17 @@
 import { useState } from "react";
 
 function GalleryItem({ item, updateItem }) {
+    // toggle for shorting the on click with the img.
     const [isToggled, setIsToggled] = useState(false);
-    const [like, setLike] = useState(0);
 
+    // this function is passed though the onclick to change the state of isToggled
     const handleClick = () => {
         console.log('you clicked a picture!');
         setIsToggled(!isToggled);
     }
 
+    // this function is passed though the onclick "i loved this" button to increase the counter
+    // update item is living in App.jsx and passed in though props through galleryList.jsx
     const handleLikeClick = () => {
         console.log('current like click before adding 1 is:', item.likes);
         updateItem(item.id);
