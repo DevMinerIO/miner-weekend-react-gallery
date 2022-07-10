@@ -10,6 +10,8 @@ function App() {
   // state to hold gallery photos
   const [photoList, setPhotoList] = useState([]);
 
+// photos was a bad naming convention. Should have been: getItems();
+// get request to grab all data currently in the sql
   const getPhotos = () => {
     axios({
       method: 'GET',
@@ -26,7 +28,8 @@ function App() {
       });
   }
 
-  // PUT Request
+  // PUT Request with sql * Remember to add "gallery" since its not implied
+  // parameter of id is used in GalleryItem.jsx to grab an item by id
   const updateItem = (id) => {
     axios.put(`gallery/like/${id}`)
       .then(response => getPhotos())
@@ -42,8 +45,7 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        {/* <img src="images/goat_small.jpg" /> */}
+        <p>Welcome to my Gallery</p>
         <div className='gallery-container'>
         <GalleryList list={photoList}
             photo={getPhotos}

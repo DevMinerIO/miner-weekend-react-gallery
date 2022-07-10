@@ -24,8 +24,11 @@ img {
   margin:auto;
   height: 120px;
   height: 120px;
-  text-align: center;
   border: 1px solid;
   display: inline-block;
   box-sizing: border-box;
+  justify-content: space-between;
+}
+.gallery-container {
+  padding: 0px;
 }
