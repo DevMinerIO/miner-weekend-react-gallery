@@ -1,18 +1,18 @@
+// import galleryItem component
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList({ list }) {
     
     return (
         <>
-            {list.map(photo =>
-                <div class="single-photo" key={photo.id}>
-                    <img src={photo.path} />
-                    <p>{photo.description}</p>
-                    <br/>
-                    <button>I love it!</button>
-                    <p><span>{photo.likes}</span> People loved this!</p>
-                </div> )}
+            {list.map(item =>
+                (<GalleryItem
+                    key={item.id}
+                item = {item} />)
+            )}
         </>
     )
 }
+
 
 export default GalleryList;
