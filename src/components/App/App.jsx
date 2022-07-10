@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 // import { response } from 'express';
+// COMPONENT IMPORTS
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
 
@@ -34,7 +36,9 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg" />
+        {/* <img src="images/goat_small.jpg" /> */}
+        <GalleryList list={photoList}
+          photo={getPhotos} />
         
       </div>
     );

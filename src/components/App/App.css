@@ -13,3 +13,13 @@
   font-size: 1.5em;
 }
 
+img {
+  height: 100px;
+  width: auto;
+}
+
+.single-photo {
+  display: inline-flexbox;
+  padding: 100px;
+}
+
